@@ -1,35 +1,6 @@
 # SAFFNet: self-attention based on Fourier frequency domain filter network for visual question answering
 
 
-
-
-
-
-### Installation
-- Clone this repo
-```bash
-git clone https://github.com/rentainhe/TRAR-VQA.git
-cd TRAR-VQA
-```
-
-- Create a conda virtual environment and activate it
-```bash
-conda create -n trar python=3.7 -y
-conda activate trar
-```
-
-- Install `CUDA==10.1` with `cudnn7` following the [official installation instructions](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
-- Install `Pytorch==1.7.1` and `torchvision==0.8.2` with `CUDA==10.1`:
-```bash
-conda install pytorch==1.7.1 torchvision==0.8.2 cudatoolkit=10.1 -c pytorch
-```
-- Install [Spacy](https://spacy.io/) and initialize the [GloVe](https://github-releases.githubusercontent.com/84940268/9f4d5680-4fed-11e9-9dd2-988cce16be55?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210815%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210815T072922Z&X-Amz-Expires=300&X-Amz-Signature=1bd1bd4fc52057d8ac9eec7720e3dd333e63c234abead471c2df720fb8f04597&X-Amz-SignedHeaders=host&actor_id=48727989&key_id=0&repo_id=84940268&response-content-disposition=attachment%3B%20filename%3Den_vectors_web_lg-2.1.0.tar.gz&response-content-type=application%2Foctet-stream) as follows:
-```bash
-pip install -r requirements.txt
-wget https://github.com/explosion/spacy-models/releases/download/en_vectors_web_lg-2.1.0/en_vectors_web_lg-2.1.0.tar.gz -O en_vectors_web_lg-2.1.0.tar.gz
-pip install en_vectors_web_lg-2.1.0.tar.gz
-```
-
 ### Dataset setup
 see [DATA.md](DATA.md)
 
@@ -137,15 +108,3 @@ Here we provide our pretrained model and log, please see [MODEL.md](MODEL.md)
 - [openvqa](https://github.com/MILVLG/openvqa)
 - [grid-feats-vqa](https://github.com/facebookresearch/grid-feats-vqa)
 
-## Citation
-if TRAR is helpful for your research or you wish to refer the baseline results published here, we'd really appreciate it if you could cite this paper:
-```
-@InProceedings{Zhou_2021_ICCV,
-    author    = {Zhou, Yiyi and Ren, Tianhe and Zhu, Chaoyang and Sun, Xiaoshuai and Liu, Jianzhuang and Ding, Xinghao and Xu, Mingliang and Ji, Rongrong},
-    title     = {TRAR: Routing the Attention Spans in Transformer for Visual Question Answering},
-    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-    month     = {October},
-    year      = {2021},
-    pages     = {2074-2084}
-}
-```
